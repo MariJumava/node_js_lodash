@@ -51,6 +51,11 @@ const newData1 = data1.map((user) => lodash.pick(user, ["name", "email"]));
 
 // Task 4
 
-const result = data1.map((item) =>
-  Object.assign({ name: item.name, email: item.email })
-);
+const defaultObj = {
+  age: 40,
+  name: "James Dinh",
+  email: "j.dink@erw.com",
+};
+
+const { age, ...newObj } = defaultObj;
+const changedObj = newObj;
